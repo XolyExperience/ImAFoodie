@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/resourses/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>I'm a Foodie!</title>
+</head>
+
+<body>
+    <div class="menuRow">
+        <div class="menu-btn">
+            <div class="menu-btn_burger"></div>
+        </div>
+        <div class="logo">
+            <link rel="stylesheet" href="#">
+        </div>
+        <div class="sort-btn">
+        </div>
+    </div>
+    
+
+    <div class="menu">
+        <ul>
+            <li>
+                <img class="icon" src="/resourses/home.svg" alt="Home" />
+                HOME
+            </li>
+            <li>
+                <img class="icon" src="/resourses/cash-register.svg" alt="My Orders" />
+                MY ORDERS
+            </li>
+            <li>
+                <img class="icon" src="/resourses/tag.svg" alt="Deals" />
+                DEALS
+            </li>
+            <li>
+                <img class="icon" src="/resourses/cog.svg" alt="Settings" />
+                SETTINGS
+            </li>
+            <li>
+                <div class="userImage"></div>
+                <h4>Beff Henriksson</h4>
+                <p>My profile</p>
+            </li>
+            <li>
+                <p id="signOut">Sign Out</p>
+            </li>
+        </ul>
+    </div>
+    <div class="menu-sort">
+        <button onclick="getLocation()">Set current location</button>
+        <p id="errorText"></p>
+        <label for="distance">Distance in miles</label>
+        <br>
+        <input type="text" name="distance" id="distance" value="50">
+        <br>
+        <button onclick="sort()">Sort</button>
+    </div>
+
+    <div id="restaurants">
+    </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
