@@ -86,7 +86,7 @@ body {
 .menuRow .logo {
     width: 60px;
     height: 60px;
-    background-image: url(./resourses/logo.png);
+    background-image: url(../resourses/logo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,7 +95,7 @@ body {
 .menuRow .sort-btn {
     width: 60px;
     height: 60px;
-    background-image: url(./resourses/sort.svg);
+    background-image: url(../resourses/sort.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -134,7 +134,7 @@ li {
 .userImage {
     width: 100px;
     height: 100px;
-    background-image: url(./resourses/userImage.JPG);
+    background-image: url(../resourses/userImage.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
