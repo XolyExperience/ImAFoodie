@@ -11,9 +11,17 @@
 </head>
 
 <body>
-    <div class="menu-btn">
-        <div class="menu-btn_burger"></div>
+    <div class="menuRow">
+        <div class="menu-btn">
+            <div class="menu-btn_burger"></div>
+        </div>
+        <div class="logo">
+            <link rel="stylesheet" href="#">
+        </div>
+        <div class="sort-btn">
+        </div>
     </div>
+    
 
     <div class="menu">
         <ul>
@@ -43,16 +51,16 @@
             </li>
         </ul>
     </div>
-
-    <div id="sorter">
+    <div class="menu-sort">
         <button onclick="getLocation()">Set current location</button>
         <p id="errorText"></p>
         <label for="distance">Distance in miles</label>
         <br>
-        <input type="text" name="distance" id="distance" value="500">
+        <input type="text" name="distance" id="distance" value="50">
         <br>
-        <button onclick="sorting()">Sort</button>
+        <button onclick="sort()">Sort</button>
     </div>
+
     <div id="restaurants">
     </div>
     </div>
