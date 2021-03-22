@@ -2,17 +2,15 @@
 const menuRow = document.querySelector('.menuRow');
 const menuBtn = document.querySelector('.menu-btn');
 const sortBtn = document.querySelector('.sort-btn');
-
 const menu = document.querySelector('.menu');
 const sortMenu = document.querySelector('.menu-sort');
-
 let menuOpen = false;
 let sortMenuOpen = false;
 
 var errorText = document.getElementById('errorText');
 var userLat = 40.71;
 var userLong = -74.0;
-var userDist = document.getElementById('distance').value;
+var userDist = 50;
 const APIURL = `https://api.documenu.com/v2/restaurants/search/geo`;
 
 // Functions
@@ -28,8 +26,15 @@ function addPosition(position) {
     userLong = position.coords.longitude.toFixed(6);
 }
 function sort() {
+    var userDist = document.getElementById('distance').value;
+    var parent = document.getElementById("restaurants");
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
     getRestaurants(userLat, userLong, userDist, APIURL);
-
+    sortMenu.classList.remove('open');
+    menuRow.classList.remove('open');
+    sortMenuOpen = false;
 }
 function getRestaurants(lat, long, dist, url) {
     let endpoint = url += `?lat=${lat}&lon=${long}&distance=${dist}`;

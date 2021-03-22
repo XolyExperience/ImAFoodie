@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/resourses/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" defer></script>
     <title>I'm a Foodie!</title>
 </head>
 
@@ -49,13 +50,15 @@
             <li>
                 <p id="signOut">Sign Out</p>
             </li>
-        </ul>
+        </ul> 
     </div>
     <div class="menu-sort">
         <button onclick="getLocation()">Set current location</button>
         <p id="errorText"></p>
+        <br>
         <label for="distance">Distance in miles</label>
         <br>
+        <input type="range" value="50" min="1" max="500" oninput="this.nextElementSibling.value = this.value">
         <input type="text" name="distance" id="distance" value="50">
         <br>
         <button onclick="sort()">Sort</button>
@@ -64,7 +67,6 @@
     <div id="restaurants">
     </div>
     </div>
-    <script src="./js/main.js"></script>
 </body>
 
 </html>
