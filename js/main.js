@@ -76,10 +76,12 @@ getRestaurants(userLat, userLong, userDist, APIURL);
 menuBtn.addEventListener('click', () => {
     if (!menuOpen) {
         menuRow.classList.add('open');
+        menuBtn.classList.add('open');
         menu.classList.add('open');
         menuOpen = true;
     } else {
         menuRow.classList.remove('open');
+        menuBtn.classList.remove('open');
         menu.classList.remove('open');
         menuOpen = false;
     }
